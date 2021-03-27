@@ -1,5 +1,7 @@
 package com.luv2code.ecommerce.config;
 
+import javax.annotation.PostConstruct;
+
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
