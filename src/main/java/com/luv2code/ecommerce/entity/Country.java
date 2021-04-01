@@ -28,6 +28,14 @@ public class Country {
     @JsonIgnore
     private List<State> states;
 
+	public Country(String code, String name) {
+		super();
+		this.code = code;
+		this.name = name;
+	}
+
+    
+    
 }
 
 
