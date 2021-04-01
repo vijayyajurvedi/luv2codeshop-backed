@@ -15,6 +15,7 @@ import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
 import org.hibernate.annotations.Type;
+import org.springframework.transaction.annotation.Transactional;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -40,9 +41,7 @@ public class ImageModel {
     @Column(name = "type")
     private String type;
 
-    //@Lob
     @Lob 
-    @Type(type = "text") 
     @Column(name = "pic")
     private byte[] pic;
     
