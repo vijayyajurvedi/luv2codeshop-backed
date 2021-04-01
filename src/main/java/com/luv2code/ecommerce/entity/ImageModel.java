@@ -14,6 +14,8 @@ import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.UniqueConstraint;
 
+import org.hibernate.annotations.Type;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -38,7 +40,9 @@ public class ImageModel {
     @Column(name = "type")
     private String type;
 
-    @Lob
+    //@Lob
+    @Lob 
+    @Type(type = "text") 
     @Column(name = "pic")
     private byte[] pic;
     
