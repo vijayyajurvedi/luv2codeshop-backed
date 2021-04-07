@@ -17,6 +17,8 @@ import javax.persistence.UniqueConstraint;
 import org.hibernate.annotations.Type;
 import org.springframework.transaction.annotation.Transactional;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -46,6 +48,7 @@ public class ImageModel {
     private byte[] pic;
     
     @OneToOne(  mappedBy = "imagename",cascade = CascadeType.ALL )
+    @JsonBackReference
     private  Product products;
 
 //Custom Constructor

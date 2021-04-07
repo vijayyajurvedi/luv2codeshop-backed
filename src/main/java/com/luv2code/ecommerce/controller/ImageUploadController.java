@@ -2,6 +2,7 @@ package com.luv2code.ecommerce.controller;
 
 import java.io.IOException;
 import java.math.BigDecimal;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,7 +30,7 @@ import net.minidev.json.parser.ParseException;
 
 @RestController
 @CrossOrigin 
-@RequestMapping(path = "check")
+@RequestMapping(path = "/check")
 public class ImageUploadController {
 
 	@Autowired
@@ -64,10 +65,12 @@ public class ImageUploadController {
     
     @CrossOrigin 
     @GetMapping("/getimages")
-    public List<ImageModel> getImages()
+    public  Iterable<ImageModel> getImages()
     {
-    	final List<ImageModel> savedImage = imageRepository.findAll();
-		return savedImage;
+    	List<ImageModel> passengers = imageRepository.findAll();
+    	
+    	  
+		return passengers;
     }
     
     
