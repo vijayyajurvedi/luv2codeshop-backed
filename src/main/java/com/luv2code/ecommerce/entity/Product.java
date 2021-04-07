@@ -4,6 +4,7 @@ import lombok.Data;
 import org.hibernate.annotations.CreationTimestamp;
 import org.hibernate.annotations.UpdateTimestamp;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import javax.persistence.*;
@@ -48,7 +49,8 @@ public class Product {
     private ProductCategory category;
     
     @OneToOne(cascade = CascadeType.ALL)
-    @JsonManagedReference
+    //@JsonManagedReference
+    @JsonBackReference
     @JoinColumn(name = "image_id",nullable=false,  referencedColumnName = "id")
     private ImageModel imagename;
   
