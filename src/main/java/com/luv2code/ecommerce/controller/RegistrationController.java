@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luv2code.ecommerce.entity.User;
 import com.luv2code.ecommerce.service.RegistrationService;
 
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RestController
 public class RegistrationController {
 

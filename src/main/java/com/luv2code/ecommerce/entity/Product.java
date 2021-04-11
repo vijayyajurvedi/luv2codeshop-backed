@@ -47,12 +47,6 @@ public class Product {
     @ManyToOne
     @JoinColumn(name = "category_id", nullable = false)
     private ProductCategory category;
-    
-    @OneToOne(cascade = CascadeType.ALL)
-    //@JsonManagedReference
-    @JsonBackReference
-    @JoinColumn(name = "image_id",nullable=false,  referencedColumnName = "id")
-    private ImageModel imagename;
   
     @Column(name = "date_created")
     @CreationTimestamp
